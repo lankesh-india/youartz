@@ -1,16 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouArtz - Creator Video Platform</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .btn-container {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: #4f46e5;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #4338ca;
+        }
+        .btn-secondary {
+            background: #10b981;
+        }
+        .btn-secondary:hover {
+            background: #059669;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to YouArtz</h1>
-        
-    <p><strong>Youartz</strong> is a <strong>Made in India video sharing platform</strong> designed for creators.</p>
-    <p>Monetize your content easily: <strong>Monetize with 50 subscribers and 50 hours watch time, or 20K short views!</strong></p>
-    
-    <p>Explore short videos and creator content on our main platform: <a href="https://dekhotv.in">DekhoTV</a></p>
 
-    <p>Download from <a href="https://play.google.com/store/apps/details?id=com.youartz.dekhotv&pcampaignid=web_share">Google Play Store</a> or Indus App Store.</p>
+    <div class="container">
+        <h1>Welcome to YouArtz</h1>
+        
+        <p><strong>YouArtz</strong> is a <strong>Made in India video sharing platform</strong> designed for creators.</p>
+        
+        <div class="highlight">
+            Monetize with 50 subscribers and 50 hours watch time, or 20K short views!
+        </div>
+        
+        <p>Explore short videos and creator content on our main platform.</p>
+
+        <div class="btn-container">
+            <a href="https://dekhotv.in" class="btn">Visit DekhoTV</a>
+            <a href="https://play.google.com/store/apps/details?id=com.youartz.dekhotv&pcampaignid=web_share" class="btn btn-secondary">Get on Google Play</a>
+        </div>
+    </div>
+
 </body>
 </html>

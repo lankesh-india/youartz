@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>YouArtz – Indian Video Platform for Creators</title>
 
     <meta name="description"
-        content="YouArtz is a video sharing platform for creators to upload videos, build an audience and work toward creator monetization.">
+        content="YouArtz is a video sharing platform for creators to upload videos, build an audience and explore creator monetization.">
+
     <meta name="robots" content="index, follow">
+
     <link rel="canonical" href="https://dekhotv.in/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="YouArtz – Video Platform for Creators">
-    <meta property="og:description" content="Create, upload, share and grow with YouArtz by DekhoTV.">
+    <meta property="og:description" content="Create, upload, share and grow with YouArtz.">
     <meta property="og:url" content="https://dekhotv.in/">
 
     <!-- Theme -->
@@ -40,6 +43,7 @@
                 Roboto,
                 Arial,
                 sans-serif;
+
             background:
                 radial-gradient(circle at top right,
                     rgba(59, 130, 246, 0.18),
@@ -48,6 +52,7 @@
                     #0B1220 0%,
                     #111827 55%,
                     #0B1220 100%);
+
             color: #e5e7eb;
             min-height: 100vh;
             line-height: 1.7;
@@ -68,8 +73,10 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
             padding: 50px;
+
             box-shadow:
                 0 25px 70px rgba(0, 0, 0, 0.35);
+
             backdrop-filter: blur(12px);
         }
 
@@ -77,8 +84,10 @@
             display: inline-block;
             padding: 7px 14px;
             border-radius: 999px;
+
             background: rgba(59, 130, 246, 0.12);
             border: 1px solid rgba(59, 130, 246, 0.3);
+
             color: #60a5fa;
             font-size: 13px;
             font-weight: 700;
@@ -90,10 +99,12 @@
             margin: 0;
             font-size: clamp(38px, 6vw, 64px);
             line-height: 1.05;
+
             background:
                 linear-gradient(90deg,
                     #3B82F6,
                     #06B6D4);
+
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -128,10 +139,12 @@
             margin: 30px 0;
             padding: 24px;
             border-radius: 16px;
+
             background:
                 linear-gradient(135deg,
                     rgba(59, 130, 246, 0.12),
                     rgba(6, 182, 212, 0.08));
+
             border: 1px solid rgba(59, 130, 246, 0.25);
         }
 
@@ -144,8 +157,7 @@
 
         .stats {
             display: grid;
-            grid-template-columns:
-                repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin: 30px 0;
         }
@@ -153,8 +165,10 @@
         .stat {
             padding: 20px;
             border-radius: 14px;
+
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.07);
+
             text-align: center;
         }
 
@@ -178,6 +192,50 @@
             color: #cbd5e1;
         }
 
+        /* Resource Links */
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .resource-link {
+            display: block;
+            padding: 18px 20px;
+
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 14px;
+
+            text-decoration: none;
+            color: #e5e7eb;
+
+            transition:
+                transform .2s ease,
+                background .2s ease,
+                border-color .2s ease;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-3px);
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.35);
+        }
+
+        .resource-link strong {
+            display: block;
+            color: #f8fafc;
+            margin-bottom: 5px;
+        }
+
+        .resource-link span {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
         .buttons {
             display: flex;
             gap: 14px;
@@ -189,8 +247,10 @@
             display: inline-block;
             padding: 14px 24px;
             border-radius: 10px;
+
             text-decoration: none;
             font-weight: 800;
+
             transition:
                 transform .2s ease,
                 opacity .2s ease;
@@ -223,6 +283,7 @@
 
         .faq-item {
             padding: 18px 0;
+
             border-bottom:
                 1px solid rgba(255, 255, 255, .08);
         }
@@ -244,7 +305,24 @@
             text-decoration: none;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+        }
+
+        .footer-links a:hover {
+            color: #60a5fa;
+        }
+
         @media (max-width: 650px) {
+
             .wrapper {
                 padding: 25px 14px;
             }
@@ -258,6 +336,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .resources {
+                grid-template-columns: 1fr;
+            }
+
             .buttons {
                 flex-direction: column;
             }
@@ -266,9 +348,16 @@
                 text-align: center;
                 width: 100%;
             }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
         }
     </style>
+
     <!-- Structured Data -->
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -278,106 +367,142 @@
         "description": "Video sharing platform for creators."
     }
     </script>
+
 </head>
 
 <body>
+
     <div class="wrapper">
+
         <main class="container">
+
             <article class="card">
+
                 <div class="badge">
                     CREATOR VIDEO PLATFORM
                 </div>
+
                 <h1>YouArtz</h1>
+
                 <div class="tagline">
                     Create. Share. Grow. Build your audience.
                 </div>
+
                 <p>
-                    <strong>YouArtz</strong>, is a video sharing platform
+                    <strong>YouArtz</strong> is a video sharing platform
                     built to give independent creators another place to
                     publish videos, reach audiences and grow their channels.
                 </p>
+
                 <p>
                     The platform supports creator-focused video content,
                     including short-form and long-form videos, with an
                     Android application designed for viewers and creators.
                 </p>
+
                 <div class="highlight">
+
                     <div class="highlight-title">
                         Creator Monetization
                     </div>
+
                     <p>
                         YouArtz currently presents a creator monetization
                         pathway based on
-                        <strong>50 subscribers and 50 hours of watch time</strong>,
+                        <strong>
+                            50 subscribers and 50 hours of watch time
+                        </strong>,
                         with an alternative threshold of
-                        <strong>20K short-video views</strong>.
+                        <strong>
+                            20K short-video views
+                        </strong>.
                     </p>
+
                     <p>
                         Eligibility and monetization are subject to the
                         platform's applicable creator policies and
                         requirements.
                     </p>
+
                 </div>
+
                 <div class="stats">
+
                     <div class="stat">
                         <strong>Video</strong>
                         <span>Creator Content</span>
                     </div>
+
                     <div class="stat">
                         <strong>Shorts</strong>
                         <span>Short-form Videos</span>
                     </div>
+
                     <div class="stat">
                         <strong>Android</strong>
                         <span>Mobile Experience</span>
                     </div>
+
                 </div>
+
                 <h2>
                     What is YouArtz?
                 </h2>
+
                 <p>
                     YouArtz is designed for creators who want to upload
                     and share their original video content while building
                     an audience. The platform brings video publishing,
-                    creator profiles and audience engagement together in
-                    one ecosystem.
+                    creator profiles and audience engagement together
+                    in one ecosystem.
                 </p>
+
                 <h2>
                     Creator Features
                 </h2>
+
                 <ul>
+
                     <li>
                         Upload and publish creator videos.
                     </li>
+
                     <li>
                         Dedicated short-video content experience.
                     </li>
+
                     <li>
                         Creator profiles and audience engagement.
                     </li>
+
                     <li>
                         Tools and features designed around creator growth.
                     </li>
+
                     <li>
                         Creator monetization pathway based on published
                         eligibility requirements.
                     </li>
+
                 </ul>
+
                 <h2>
                     Looking for Alternatives to Major Social Video Platforms?
                 </h2>
 
                 <p>
-                    Creators today publish content across different video and social
-                    platforms. YouTube, Facebook, Instagram, and TikTok each provide
-                    different ways for creators to share content and reach audiences.
+                    Creators today publish content across different video
+                    and social platforms. YouTube, Facebook, Instagram,
+                    and TikTok each provide different ways for creators
+                    to share content and reach audiences.
                 </p>
 
                 <p>
-                    Some creators also look for alternative video platforms where they
-                    can build an additional audience, publish their videos, and explore
-                    different creator opportunities. YouArtz is one platform
-                    creators can explore as an additional publishing destination.
+                    Some creators also look for alternative video platforms
+                    where they can build an additional audience, publish
+                    their videos, and explore different creator opportunities.
+                    YouArtz is one platform creators can explore as an
+                    additional publishing destination.
                 </p>
 
                 <h3>
@@ -385,10 +510,11 @@
                 </h3>
 
                 <p>
-                    Creators looking beyond YouTube can explore other video-sharing
-                    platforms that support video uploads, audience development and
-                    creator-focused features. YouArtz provides another place for
-                    creators to publish videos and build their presence.
+                    Creators looking beyond YouTube can explore other
+                    video-sharing platforms that support video uploads,
+                    audience development and creator-focused features.
+                    YouArtz provides another place for creators to publish
+                    videos and build their presence.
                 </p>
 
                 <h3>
@@ -396,9 +522,10 @@
                 </h3>
 
                 <p>
-                    Facebook is one option for sharing video content, but creators can
-                    also use dedicated video-sharing platforms as additional places to
-                    publish their work and reach viewers.
+                    Facebook is one option for sharing video content,
+                    but creators can also use dedicated video-sharing
+                    platforms as additional places to publish their work
+                    and reach viewers.
                 </p>
 
                 <h3>
@@ -406,10 +533,11 @@
                 </h3>
 
                 <p>
-                    Instagram is widely used for short-form visual content. Creators
-                    who want additional publishing options can also explore video
-                    platforms that provide dedicated creator profiles, video uploads
-                    and audience-building features.
+                    Instagram is widely used for short-form visual content.
+                    Creators who want additional publishing options can
+                    also explore video platforms that provide dedicated
+                    creator profiles, video uploads and audience-building
+                    features.
                 </p>
 
                 <h3>
@@ -417,59 +545,125 @@
                 </h3>
 
                 <p>
-                    TikTok is known for short-form video. Creators interested in
-                    additional short-video platforms can explore other services that
-                    allow them to publish short videos and reach new audiences.
+                    TikTok is known for short-form video. Creators interested
+                    in additional short-video platforms can explore other
+                    services that allow them to publish short videos and
+                    reach new audiences.
                 </p>
 
                 <h3>
-                    Can creators use YouTube, Facebook, Instagram, TikTok and YouArtz
-                    together?
+                    Can creators use YouTube, Facebook, Instagram, TikTok
+                    and YouArtz together?
                 </h3>
 
                 <p>
-                    Creators can choose to publish their content across multiple
-                    platforms when their content and the platforms' policies allow it.
-                    Using multiple platforms can provide additional opportunities to
-                    distribute content and reach different audiences.
+                    Creators can choose to publish their content across
+                    multiple platforms when their content and the platforms'
+                    policies allow it. Using multiple platforms can provide
+                    additional opportunities to distribute content and
+                    reach different audiences.
                 </p>
 
                 <div class="highlight">
+
                     <div class="highlight-title">
                         Another Platform for Creators
                     </div>
+
                     <p>
                         YouArtz gives creators another destination for
-                        uploading videos, publishing short-form content, building an
-                        audience and exploring creator monetization.
+                        uploading videos, publishing short-form content,
+                        building an audience and exploring creator
+                        monetization.
                     </p>
+
                 </div>
+
+                <!-- Creator Resources -->
+
+                <h2>
+                    Creator Resources
+                </h2>
+
+                <p>
+                    Explore practical guides and resources for video
+                    creators, publishing, audience growth and creator
+                    monetization.
+                </p>
+
+                <div class="resources">
+
+                    <a href="creator-guide.html" class="resource-link">
+                        <strong>Creator Guide</strong>
+                        <span>
+                            Learn about creating, publishing and growing
+                            as a video creator.
+                        </span>
+                    </a>
+
+                    <a href="video-creator-resources.html" class="resource-link">
+                        <strong>Video Creator Resources</strong>
+                        <span>
+                            Explore resources for video creation,
+                            thumbnails, SEO and voice-over.
+                        </span>
+                    </a>
+
+                    <a href="video-platform-guide.html" class="resource-link">
+                        <strong>Video Platform Guide</strong>
+                        <span>
+                            Understand video platforms, formats and
+                            multi-platform publishing.
+                        </span>
+                    </a>
+
+                    <a href="monetization-guide.html" class="resource-link">
+                        <strong>Creator Monetization Guide</strong>
+                        <span>
+                            Learn about creator monetization,
+                            eligibility and common requirements.
+                        </span>
+                    </a>
+
+                </div>
+
                 <h2>
                     Frequently Asked Questions
                 </h2>
+
                 <div class="faq">
+
                     <div class="faq-item">
                         <strong>What is YouArtz?</strong>
+
                         <span>
                             YouArtz is a video sharing and creator platform.
                         </span>
                     </div>
+
                     <div class="faq-item">
                         <strong>Can creators upload videos?</strong>
+
                         <span>
                             Yes. YouArtz provides video publishing features
                             for creators.
                         </span>
                     </div>
+
                     <div class="faq-item">
                         <strong>Does YouArtz have an Android app?</strong>
+
                         <span>
-                            Yes. The YouArtz@dekhotv Android application
-                            is available through Google Play.
+                            Yes. The YouArtz Android application is
+                            available through Google Play.
                         </span>
                     </div>
+
                     <div class="faq-item">
-                        <strong>How does creator monetization work?</strong>
+                        <strong>
+                            How does creator monetization work?
+                        </strong>
+
                         <span>
                             The platform currently publishes a
                             50-subscriber and 50-hour watch-time pathway,
@@ -477,58 +671,114 @@
                             platform requirements.
                         </span>
                     </div>
+
                     <div class="faq-item">
-                        <strong>What are alternatives to YouTube for creators?</strong>
+                        <strong>
+                            What are alternatives to YouTube for creators?
+                        </strong>
+
                         <span>
-                            Creators can explore additional video-sharing platforms such as
-                            YouArtz to publish content, build an audience and develop their
-                            creator presence.
+                            Creators can explore additional video-sharing
+                            platforms such as YouArtz to publish content,
+                            build an audience and develop their creator
+                            presence.
                         </span>
                     </div>
+
                     <div class="faq-item">
-                        <strong>What are alternatives to Facebook and Instagram for video creators?</strong>
+                        <strong>
+                            What are alternatives to Facebook and Instagram
+                            for video creators?
+                        </strong>
+
                         <span>
-                            Creators can use additional video platforms alongside social
-                            networks to publish videos and reach different audiences.
+                            Creators can use additional video platforms
+                            alongside social networks to publish videos
+                            and reach different audiences.
                         </span>
                     </div>
+
                     <div class="faq-item">
-                        <strong>What are alternatives to TikTok for short-video creators?</strong>
+                        <strong>
+                            What are alternatives to TikTok for short-video
+                            creators?
+                        </strong>
+
                         <span>
-                            Creators interested in short-form video can explore additional
-                            platforms where they can publish short videos and reach viewers.
+                            Creators interested in short-form video can
+                            explore additional platforms where they can
+                            publish short videos and reach viewers.
                         </span>
                     </div>
+
                     <div class="faq-item">
-                        <strong>Can I use YouTube, Facebook, Instagram, TikTok and YouArtz together?</strong>
+                        <strong>
+                            Can I use YouTube, Facebook, Instagram, TikTok
+                            and YouArtz together?
+                        </strong>
+
                         <span>
-                            Yes. Creators can use multiple platforms when their content and
-                            each platform's policies allow it.
+                            Yes. Creators can use multiple platforms when
+                            their content and each platform's policies
+                            allow it.
                         </span>
                     </div>
+
                 </div>
+
                 <div class="buttons">
+
                     <a href="https://dekhotv.in/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                         Visit YouArtz
                     </a>
+
                     <a href="https://play.google.com/store/apps/details?id=com.youartz.dekhotv"
                         class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         Get the Android App
                     </a>
+
                 </div>
+
             </article>
+
             <footer>
+
                 <p>
-                    YouArtz — Creator Video Platform
+                    <strong>YouArtz</strong> — Creator Video Platform
                 </p>
+
+                <nav class="footer-links" aria-label="Creator Resources">
+
+                    <a href="creator-guide.html">
+                        Creator Guide
+                    </a>
+
+                    <a href="video-creator-resources.html">
+                        Video Creator Resources
+                    </a>
+
+                    <a href="video-platform-guide.html">
+                        Video Platform Guide
+                    </a>
+
+                    <a href="monetization-guide.html">
+                        Creator Monetization Guide
+                    </a>
+
+                </nav>
+
                 <p>
                     <a href="https://dekhotv.in/" target="_blank" rel="noopener noreferrer">
                         dekhotv.in
                     </a>
                 </p>
+
             </footer>
+
         </main>
+
     </div>
+
 </body>
 
 </html>

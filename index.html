@@ -1,93 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouArtz - Creator Video Platform</title>
+    <title>YouArtz – Indian Video Platform for Creators</title>
+
+    <meta name="description"
+        content="YouArtz is a video sharing platform for creators to upload videos, build an audience and work toward creator monetization.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dekhotv.in/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="YouArtz – Video Platform for Creators">
+    <meta property="og:description" content="Create, upload, share and grow with YouArtz by DekhoTV.">
+    <meta property="og:url" content="https://dekhotv.in/">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0B1220">
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            background:
+                radial-gradient(circle at top right,
+                    rgba(59, 130, 246, 0.18),
+                    transparent 35%),
+                linear-gradient(135deg,
+                    #0B1220 0%,
+                    #111827 55%,
+                    #0B1220 100%);
+            color: #e5e7eb;
             min-height: 100vh;
+            line-height: 1.7;
         }
+
+        .wrapper {
+            width: 100%;
+            padding: 60px 20px;
+        }
+
         .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(17, 24, 39, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.05;
+            background:
+                linear-gradient(90deg,
+                    #3B82F6,
+                    #06B6D4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            font-size: 21px;
+            color: #cbd5e1;
+            margin: 18px 0 30px;
+        }
+
+        h2 {
+            margin-top: 42px;
+            color: #f8fafc;
+            font-size: 25px;
+        }
+
+        h3 {
+            color: #f8fafc;
+        }
+
+        p {
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #f8fafc;
+        }
+
+        .highlight {
+            margin: 30px 0;
+            padding: 24px;
+            border-radius: 16px;
+            background:
+                linear-gradient(135deg,
+                    rgba(59, 130, 246, 0.12),
+                    rgba(6, 182, 212, 0.08));
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        .highlight-title {
+            color: #60a5fa;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .stat {
+            padding: 20px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.07);
             text-align: center;
         }
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 20px;
+
+        .stat strong {
+            display: block;
+            font-size: 22px;
+            color: #60a5fa;
         }
-        p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
+
+        .stat span {
+            color: #94a3b8;
+            font-size: 13px;
         }
-        .highlight {
-            background: #eef2ff;
-            color: #4f46e5;
-            padding: 10px 15px;
-            border-radius: 8px;
-            display: inline-block;
-            font-weight: bold;
-            margin: 10px 0;
+
+        ul {
+            padding-left: 22px;
         }
-        .btn-container {
-            margin-top: 25px;
+
+        li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .buttons {
             display: flex;
-            gap: 15px;
-            justify-content: center;
+            gap: 14px;
             flex-wrap: wrap;
+            margin-top: 35px;
         }
+
         .btn {
-            background: #4f46e5;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
+            font-weight: 800;
+            transition:
+                transform .2s ease,
+                opacity .2s ease;
         }
+
         .btn:hover {
-            background: #4338ca;
+            transform: translateY(-2px);
+            opacity: .9;
         }
+
+        .btn-primary {
+            color: white;
+
+            background:
+                linear-gradient(90deg,
+                    #3B82F6,
+                    #06B6D4);
+        }
+
         .btn-secondary {
-            background: #10b981;
+            color: white;
+            background: #1f2937;
+
+            border: 1px solid rgba(255, 255, 255, .12);
         }
-        .btn-secondary:hover {
-            background: #059669;
+
+        .faq {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            padding: 18px 0;
+            border-bottom:
+                1px solid rgba(255, 255, 255, .08);
+        }
+
+        .faq-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        @media (max-width: 650px) {
+            .wrapper {
+                padding: 25px 14px;
+            }
+
+            .card {
+                padding: 28px 22px;
+                border-radius: 18px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
         }
     </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "YouArtz",
+        "url": "https://dekhotv.in/",
+        "description": "Video sharing platform for creators."
+    }
+    </script>
 </head>
+
 <body>
+    <div class="wrapper">
+        <main class="container">
+            <article class="card">
+                <div class="badge">
+                    CREATOR VIDEO PLATFORM
+                </div>
+                <h1>YouArtz</h1>
+                <div class="tagline">
+                    Create. Share. Grow. Build your audience.
+                </div>
+                <p>
+                    <strong>YouArtz</strong>, is a video sharing platform
+                    built to give independent creators another place to
+                    publish videos, reach audiences and grow their channels.
+                </p>
+                <p>
+                    The platform supports creator-focused video content,
+                    including short-form and long-form videos, with an
+                    Android application designed for viewers and creators.
+                </p>
+                <div class="highlight">
+                    <div class="highlight-title">
+                        Creator Monetization
+                    </div>
+                    <p>
+                        YouArtz currently presents a creator monetization
+                        pathway based on
+                        <strong>50 subscribers and 50 hours of watch time</strong>,
+                        with an alternative threshold of
+                        <strong>20K short-video views</strong>.
+                    </p>
+                    <p>
+                        Eligibility and monetization are subject to the
+                        platform's applicable creator policies and
+                        requirements.
+                    </p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <strong>Video</strong>
+                        <span>Creator Content</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Shorts</strong>
+                        <span>Short-form Videos</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Android</strong>
+                        <span>Mobile Experience</span>
+                    </div>
+                </div>
+                <h2>
+                    What is YouArtz?
+                </h2>
+                <p>
+                    YouArtz is designed for creators who want to upload
+                    and share their original video content while building
+                    an audience. The platform brings video publishing,
+                    creator profiles and audience engagement together in
+                    one ecosystem.
+                </p>
+                <h2>
+                    Creator Features
+                </h2>
+                <ul>
+                    <li>
+                        Upload and publish creator videos.
+                    </li>
+                    <li>
+                        Dedicated short-video content experience.
+                    </li>
+                    <li>
+                        Creator profiles and audience engagement.
+                    </li>
+                    <li>
+                        Tools and features designed around creator growth.
+                    </li>
+                    <li>
+                        Creator monetization pathway based on published
+                        eligibility requirements.
+                    </li>
+                </ul>
+                <h2>
+                    Looking for Alternatives to Major Social Video Platforms?
+                </h2>
 
-    <div class="container">
-        <h1>Welcome to YouArtz</h1>
-        
-        <p><strong>YouArtz</strong> is a <strong>Made in India video sharing platform</strong> designed for creators.</p>
-        
-        <div class="highlight">
-            Monetize with 50 subscribers and 50 hours watch time, or 20K short views!
-        </div>
-        
-        <p>Explore short videos and creator content on our main platform.</p>
+                <p>
+                    Creators today publish content across different video and social
+                    platforms. YouTube, Facebook, Instagram, and TikTok each provide
+                    different ways for creators to share content and reach audiences.
+                </p>
 
-        <div class="btn-container">
-            <a href="https://dekhotv.in" class="btn">Visit DekhoTV</a>
-            <a href="https://play.google.com/store/apps/details?id=com.youartz.dekhotv&pcampaignid=web_share" class="btn btn-secondary">Get on Google Play</a>
-        </div>
+                <p>
+                    Some creators also look for alternative video platforms where they
+                    can build an additional audience, publish their videos, and explore
+                    different creator opportunities. YouArtz is one platform
+                    creators can explore as an additional publishing destination.
+                </p>
+
+                <h3>
+                    What are alternatives to YouTube for creators?
+                </h3>
+
+                <p>
+                    Creators looking beyond YouTube can explore other video-sharing
+                    platforms that support video uploads, audience development and
+                    creator-focused features. YouArtz provides another place for
+                    creators to publish videos and build their presence.
+                </p>
+
+                <h3>
+                    What are alternatives to Facebook for video creators?
+                </h3>
+
+                <p>
+                    Facebook is one option for sharing video content, but creators can
+                    also use dedicated video-sharing platforms as additional places to
+                    publish their work and reach viewers.
+                </p>
+
+                <h3>
+                    What are alternatives to Instagram for video creators?
+                </h3>
+
+                <p>
+                    Instagram is widely used for short-form visual content. Creators
+                    who want additional publishing options can also explore video
+                    platforms that provide dedicated creator profiles, video uploads
+                    and audience-building features.
+                </p>
+
+                <h3>
+                    What are alternatives to TikTok for short-video creators?
+                </h3>
+
+                <p>
+                    TikTok is known for short-form video. Creators interested in
+                    additional short-video platforms can explore other services that
+                    allow them to publish short videos and reach new audiences.
+                </p>
+
+                <h3>
+                    Can creators use YouTube, Facebook, Instagram, TikTok and YouArtz
+                    together?
+                </h3>
+
+                <p>
+                    Creators can choose to publish their content across multiple
+                    platforms when their content and the platforms' policies allow it.
+                    Using multiple platforms can provide additional opportunities to
+                    distribute content and reach different audiences.
+                </p>
+
+                <div class="highlight">
+                    <div class="highlight-title">
+                        Another Platform for Creators
+                    </div>
+                    <p>
+                        YouArtz gives creators another destination for
+                        uploading videos, publishing short-form content, building an
+                        audience and exploring creator monetization.
+                    </p>
+                </div>
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <strong>What is YouArtz?</strong>
+                        <span>
+                            YouArtz is a video sharing and creator platform.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Can creators upload videos?</strong>
+                        <span>
+                            Yes. YouArtz provides video publishing features
+                            for creators.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Does YouArtz have an Android app?</strong>
+                        <span>
+                            Yes. The YouArtz@dekhotv Android application
+                            is available through Google Play.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>How does creator monetization work?</strong>
+                        <span>
+                            The platform currently publishes a
+                            50-subscriber and 50-hour watch-time pathway,
+                            or 20K short-video views, subject to applicable
+                            platform requirements.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What are alternatives to YouTube for creators?</strong>
+                        <span>
+                            Creators can explore additional video-sharing platforms such as
+                            YouArtz to publish content, build an audience and develop their
+                            creator presence.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What are alternatives to Facebook and Instagram for video creators?</strong>
+                        <span>
+                            Creators can use additional video platforms alongside social
+                            networks to publish videos and reach different audiences.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What are alternatives to TikTok for short-video creators?</strong>
+                        <span>
+                            Creators interested in short-form video can explore additional
+                            platforms where they can publish short videos and reach viewers.
+                        </span>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Can I use YouTube, Facebook, Instagram, TikTok and YouArtz together?</strong>
+                        <span>
+                            Yes. Creators can use multiple platforms when their content and
+                            each platform's policies allow it.
+                        </span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="https://dekhotv.in/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Visit YouArtz
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.youartz.dekhotv"
+                        class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        Get the Android App
+                    </a>
+                </div>
+            </article>
+            <footer>
+                <p>
+                    YouArtz — Creator Video Platform
+                </p>
+                <p>
+                    <a href="https://dekhotv.in/" target="_blank" rel="noopener noreferrer">
+                        dekhotv.in
+                    </a>
+                </p>
+            </footer>
+        </main>
     </div>
-
 </body>
+
 </html>
